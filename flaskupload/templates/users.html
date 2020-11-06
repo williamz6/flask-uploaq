@@ -1,0 +1,40 @@
+{% extends "layouts.html" %}
+
+{% block body %}
+<div class="">
+  <table class="table table-responsive-lg table-hover table-light table-striped">
+    <thead class="thead-dark">
+      <tr>
+        <th class="text-center">S/N</th>
+        <th class="text-center">First Name</th>
+        <th class="text-center">Last Name</th>
+        <th class="text-center">Username</th>
+        <th class="text-center">Email</th>
+        <th colspan="2">Action</th>
+      </tr>
+    </thead>
+    {% for user in users %}
+            
+              <tbody>
+                <tr class="text-center ">
+                  <th scope="row">20-IMO-PHARM-{{user.id}}</th>
+                  <td>{{user.first_name}}</td>
+                  <td>{{user.last_name}}</td>
+                  <td>{{user.username}}</td>
+                  <td>{{user.email}}</td>
+                  <td class="d-flex justify-content-around">
+                    <a href="#" class=""><i class="fa fa-edit"></i></a>
+                   <form action="" method="post">
+                        <input type="hidden" name="" value="DELETE"/>
+                        <a href="#" class="" ><i class="fa fa-trash-o"></i></a>
+                   </form>
+                  </td>
+                </tr>
+              </tbody>
+            
+    {% endfor %}
+  </table>
+  </div>
+ 
+  
+{% endblock %}

@@ -1,0 +1,25 @@
+{% extends "layouts.html" %}
+{% block body %}
+<main role="main">
+  
+
+    <div>
+      {% for user in users %}
+      <div class="card register-card mx-auto mb-4 shadow-sm ">
+        <div class="card-body">
+         <img src="https://miro.medium.com/max/438/1*0G5zu7CnXdMT9pGbYUTQLQ.png" class="card-img-top img-fluid" style="width: 100px;" height="225">
+           <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+           <small> {{user.email}} </small>
+           <div class="d-flex justify-content-between align-items-center">
+             <div class="btn-group">
+               <button type="button" class="btn btn-sm btn-outline-success">View</button>
+               <button type="button" class="btn btn-sm btn-outline-warning">Edit</button>
+             </div>
+             <small class="text-muted">{{user.username}}</small>
+           </div>
+         </div>
+       </div>
+      {% endfor %}
+    </div>
+  </main>
+{% endblock %}
